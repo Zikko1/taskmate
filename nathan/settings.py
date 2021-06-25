@@ -1,3 +1,4 @@
+import django_heroku
 import os
 import environ
 from pathlib import Path
@@ -120,6 +121,8 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # Adding Redirection for the Login Page
 LOGIN_REDIRECT_URL = "todolist"
 LOGIN_URL = "login"
+
+django_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
